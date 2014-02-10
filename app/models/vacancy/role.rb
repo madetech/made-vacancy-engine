@@ -13,6 +13,8 @@ module Vacancy
 
     default_scope :order => '`vacancy_roles`.`order` ASC'
 
+    scope :in_department_and_active, -> { where(arel_table[:department_id].not_eq(nil).and(arel_table[:active].not_eq(0))) }
+
     acts_as_url :title
 
     def to_param

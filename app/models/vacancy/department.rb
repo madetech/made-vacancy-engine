@@ -8,6 +8,8 @@ module Vacancy
 
     default_scope :order => '`vacancy_departments`.`order` ASC'
 
+    scope :with_roles, -> { includes(:roles).merge(Vacancy::Role.in_department_and_active) }
+
     acts_as_url :name
 
     def to_param
