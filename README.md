@@ -49,6 +49,7 @@ Developed and maintained by [Made](http://www.madebymade.co.uk).
 Key contributions:
 
 * [Chris Blackburn](https://github.com/chrisblackburn)
+* [Seb Ashton](https://github.com/sebashton)
 
 ##License
 
