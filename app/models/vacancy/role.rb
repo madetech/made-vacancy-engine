@@ -7,7 +7,7 @@ module Vacancy
 
     has_attached_file :image, :styles => Vacancy.config.role_image_styles
 
-    validates_presence_of :title, :description
+    validates_presence_of :title, :department, :description
 
     belongs_to :department
 
