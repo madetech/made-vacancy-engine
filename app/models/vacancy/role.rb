@@ -3,7 +3,7 @@ require 'stringex'
 module Vacancy
   class Role < ActiveRecord::Base
     attr_accessible :title, :subtitle, :description, :order, :contact_name, :contact_email,
-                    :contact_phone, :active, :department_id
+                    :contact_phone, :active, :department_id, :image, :location
 
     has_attached_file :image, :styles => Vacancy.config.role_image_styles
 
