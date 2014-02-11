@@ -14,6 +14,7 @@ if defined?(ActiveAdmin) and Vacancy.config.admin_enabled.include?(:role)
       f.inputs "Role" do
         f.input :title
         f.input :subtitle
+        f.input :location
         f.input :image,
           :hint => f.template.image_tag(f.object.image.url(:thumb))
         f.input :description
@@ -30,6 +31,7 @@ if defined?(ActiveAdmin) and Vacancy.config.admin_enabled.include?(:role)
 
     index :title => 'Role' do
       column :title
+      column :location
       column :order
       column :created_at
       column :updated_at
